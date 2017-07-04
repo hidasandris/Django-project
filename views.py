@@ -120,7 +120,7 @@ def samtax_form(request, year):
                 if instance.taxon.pk == 812:
                     instance.taxon = Taxon.objects.get(id=new_taxons[0])
                     del new_taxons[0]
-                # Model class Meta: select_on_save = True
+                # in the model `class Meta: select_on_save = True` (required)
                 for date, ind in ind_table.items():
                     instance.sample = Sample.objects.get(date=datetime.datetime.strptime(date, '%Y-%m-%d').date())
                     if ind[idx] != "":
@@ -128,6 +128,5 @@ def samtax_form(request, year):
                         instance.pk = None
                         instance.save()
     else:
-        # formset = SamTaxFormSet(initial=[{'taxon': t.id}])
         formset = SamTaxFormSet(initial=select_year, prefix='samtax')
     return render(request, 'alga/samtax_form.html', {'formset': formset, 'raw_name': raw_name})
