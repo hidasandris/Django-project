@@ -1,0 +1,72 @@
+th, td {
+    text-align: center;
+}
+.small-input {
+    width: 80px;
+    display: inline;
+}
+form {
+    margin-left: 1%;
+}
+#formset {
+    margin-top: 2%;
+}
+#multiplier-form {
+    margin: 1%;
+}
+.fixed {
+    top:0;
+    position:fixed;
+    width: auto;
+    display:none;
+    border:none;
+}
+.up {
+    margin-top:100px;
+    cursor:pointer;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:-2px;
+    margin:20px 0;
+}
+thead {
+    background:#1ABC9C;
+}
+#add_more {
+    margin-bottom: 2%;
+
+}
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+}
+
+/* Preloader */
+body {
+    overflow: hidden;
+}
+#preloader {
+    position: fixed;
+    top: 0px;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+.modal-loader {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('/static/animation/default.svg')
+    50% 50%
+    no-repeat;
+}
